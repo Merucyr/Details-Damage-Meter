@@ -481,7 +481,7 @@ end
 	end
 	--
 	local titlecase = function (first, rest)
-		return first:upper()..rest:lower()
+		return first..rest
 	end
 	--
 	local have_repeated = false
@@ -583,7 +583,8 @@ end
 		end
 		
 		--> here we format the text to match titles, e.g converts name like "JASON NICKSHOW" into "Jason Nickshow". 
-		name = name:gsub ("(%a)([%w_']*)", titlecase)
+		-- name = name:gsub ("(%a)([%w_']*)", titlecase)
+		-- uncomment above if you'd like to re-add title casing
 		
 		local playerName = UnitName ("player")
 		
